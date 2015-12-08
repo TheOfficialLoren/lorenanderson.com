@@ -1,0 +1,204 @@
+/* CSS Written by Loren Anderson */
+body {
+	background:#fff;
+	
+}
+          /* Specific DIV tags*/
+     /* -------------------------------  */
+
+#banner {
+	width: 899px;
+        height:312px;
+	background: url('images/bannerbackground04.jpg') no-repeat;
+}
+#container {
+	width:900px;
+	margin: 20px auto;
+}
+#menu {	
+	text-transform:lowercase;
+   	position:absolute;
+	float:left;
+	/* background: url('images/menubackground.jpg') no-repeat; */
+        width: 150px;
+        min-height:400px;
+  	height:auto !important;
+  	height:400px;
+  	margin-top:5px;
+  	margin-left:1px;
+}
+#content {
+	width:564px;
+	background: #FFF;
+    padding-left: 165px;
+    padding-right: 170px;
+    margin-top: 10px;	
+}
+#links {
+   	position:absolute;
+   	float:right;
+	text-transform:lowercase;
+    width: 150px;
+    margin-left: 750px;
+    margin-top:5px;
+	min-height:400px;
+  	height:auto !important;
+  	height:400px;
+
+}
+
+#footer
+{
+    padding-left: 165px;
+    margin-top:30px;
+    width:564px
+}
+
+#footer p
+{
+    text-align:center;
+    font-size:10px;
+}
+
+
+
+           /* Specific Fonts  */
+     /* -------------------------------  */
+
+
+#content h1, h2 {
+	font-family: Georgia;
+	text-align:center;
+	font-size:25pt;
+	color:#3d3d3d;
+}
+
+
+#menu li p a {
+	font-size:10px;
+	line-height:0px;
+	
+}
+
+.listitem {
+	margin-left:0px;
+	
+}
+
+
+list li p a {
+	font-size:10px;
+	line-height:0px;
+	
+}
+
+h3, h1, p {
+  margin:5px;
+	
+}
+
+
+p {
+  margin:5px;
+}
+
+         /* Specific Declarations */
+     /* -------------------------------  */
+
+#menu ul {
+	padding-left:10px;
+	margin-left:0px;
+	list-style: none;
+}
+
+
+#menu li {
+
+	/*width:124px;*/
+	/*text-align:center;*/
+	line-height:42px;
+	font-family:"Arial";
+	font-size:13px;
+	color:#624125;
+	font-weight:bold;
+	letter-spacing:1px;
+}
+
+#menu ul ul li {
+	
+	font-size:10px;
+	list-style-type:disc;
+	line-height:13px;
+	padding:0px;
+	margin-left:0px;
+}
+
+
+#links ul {
+	padding-left:10px;
+	margin-left:0px;
+	list-style: none;
+}
+
+
+#links li {
+
+	/*width:124px;*/
+	/*text-align:center;*/
+	line-height:42px;
+	font-family:"Arial";
+	font-size:13px;
+	color:#624125;
+	font-weight:bold;
+	letter-spacing:1px;
+}
+
+
+#links ul ul li {
+	
+	font-size:10px;
+	list-style-type:disc;
+	line-height:13px;
+	padding:0px;
+	margin-left:0px;
+}
+
+
+
+img {
+	border:none;
+}
+
+
+                 /* Links */
+     /* -------------------------------  */
+
+
+
+a:link {
+	text-decoration:none;
+	font-weight:bold; 
+	color:#333333;
+	
+}
+
+a:visited {  
+	text-decoration: none;
+	font-weight:bold; 
+	color:#333333;
+	
+}
+
+a:hover, a:active { 
+	text-decoration: underline; 
+	font-weight:bold; 
+	color: #93380b;
+}
+
+#menu ul ul li a {
+	color:#3d3d3d;
+}
+
+#links ul ul li a {
+	color:#3d3d3d;
+}

@@ -1,0 +1,172 @@
+﻿body 
+{
+    background: url(images/background.jpg) repeat-x #232179;
+    }
+
+#container
+{
+    /*border:1px solid black;*/
+    margin: 10px auto;
+    width:950px;    
+}
+
+#header 
+{
+    float:left;
+    margin-top:10px;
+    width:950px;
+    position:relative;    
+}
+
+#header a.wslogo
+{
+    background: url(images/Slogan.gif) no-repeat;
+    width: 150px;
+    height: 85px;
+    text-indent: -2000px;
+    position:relative;
+    cursor:pointer;
+}
+
+#header a
+{
+    display: block;
+    float: left;
+}
+
+
+#main
+{
+    background-color: #ffe09d;
+    width:950px;
+    position:relative;
+    margin-top:28px;
+}
+
+.ContainerTop
+{
+    background: url(images/mainbackground.gif) no-repeat;
+    height:28px;
+    width:950px;
+    display:block;
+    overflow:hidden;
+    float:left;
+}
+    
+ .ContainerBottom
+{
+    background: url(images/mainbackgroundbottom.gif) no-repeat;
+    height:28px;
+    width:950px;
+    display:block;
+    overflow:hidden;
+    float:left;
+}   
+    
+#maincontent
+{
+    background: url(images/contentbackground.gif) no-repeat white;
+    width: 862px;
+    margin:0px auto;    
+    padding: 5px 0px 8px 12px;
+    position:relative;
+}
+
+img
+{
+    border:none;
+    display:block;
+}
+
+
+/* Navigation Menu */
+
+ul#navigation 
+{
+    float:left;
+    width:700px;
+    margin-top:15px;
+    margin-left:10px;
+    margin-bottom:0;
+    position:relative;
+    height:40px;
+    display:block;
+
+}
+
+ul#navigation li 
+{
+    height:40px;
+    list-style-type:none;
+    display: inline;
+    float:left;
+    position:relative;
+    margin-right:5px;
+}
+
+ul#navigation li a
+{
+    display:block;
+    height:40px;
+    background-attachment: scroll;
+    float:left;
+    position:relative;
+    background-position:0;
+}
+
+ul#navigation li a#navHome:hover, ul#navigation li a#navAbout:hover, ul#navigation li a#navContact:hover, ul#navigation li a#navBrands:hover, ul#navigation li a#navSeasonal:hover, ul#navigation li a#navMedical:hover
+{
+    background-position:0 5px;
+}
+
+
+ul#navigation li a#navHome
+{
+    background: url(images/btnHome.png) no-repeat;
+    background-position:0 10px;
+    display:block;
+    width:88px;
+
+}
+
+ul#navigation li a#navContact
+{
+    background: url(images/btnContact.png) no-repeat;
+    background-position:0 10px;
+    display:block;
+    width:88px;    
+}
+
+ul#navigation li a#navAbout
+{
+    background: url(images/btnAbout.png) no-repeat;
+    background-position:0 10px;
+    display:block;
+    width:88px;    
+}
+
+ul#navigation li a#navBrands
+{
+    background: url(images/btnBrands.png) no-repeat;
+    background-position:0 10px;
+    display:block;
+    width:88px;    
+}
+
+ul#navigation li a#navSeasonal
+{
+    background: url(images/btnSeasonal.png) no-repeat;
+    background-position:0 10px;
+    display:block;
+    width:88px;    
+}
+
+ul#navigation li a#navMedical
+{
+    background: url(images/btnMedical.png) no-repeat;
+    background-position:0 10px;
+    display:block;
+    width:88px;    
+}
+
+
