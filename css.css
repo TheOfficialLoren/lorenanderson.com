@@ -1,57 +1,50 @@
 /* CSS Written by Loren Anderson */
 body {
 	background:#fff;
-	
+    font-family: raleway,sans-serif;
 }
           /* Specific DIV tags*/
      /* -------------------------------  */
 
-#banner {
-	width: 899px;
-        height:312px;
-	background: url('images/bannerbackground04.jpg') no-repeat;
-}
-#container {
-	width:900px;
-	margin: 20px auto;
-}
-#menu {	
-	text-transform:lowercase;
-   	position:absolute;
-	float:left;
-	/* background: url('images/menubackground.jpg') no-repeat; */
-        width: 150px;
-        min-height:400px;
-  	height:auto !important;
-  	height:400px;
-  	margin-top:5px;
-  	margin-left:1px;
-}
-#content {
-	width:564px;
-	background: #FFF;
-    padding-left: 165px;
-    padding-right: 170px;
-    margin-top: 10px;	
-}
-#links {
-   	position:absolute;
-   	float:right;
-	text-transform:lowercase;
-    width: 150px;
-    margin-left: 750px;
-    margin-top:5px;
-	min-height:400px;
-  	height:auto !important;
-  	height:400px;
 
+#container {
+	width:100%;
+}
+
+#content {
+	background: #FFF;
+}
+
+#header ul {
+    list-style: none;
+    margin-left: -55px;
+    margin-top:-12px
+}
+
+#header ul li {
+    float: left;    
+}
+
+
+#header ul li a {
+    display: inline-block;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+#menu {
+    width: 200px;
+    position: absolute;
+    float: left;
+    top: 150px;
+    left: 150px;
+    background: white;
+    z-index: 10;
 }
 
 #footer
 {
-    padding-left: 165px;
-    margin-top:30px;
-    width:564px
 }
 
 #footer p
@@ -77,34 +70,17 @@ body {
 #menu li p a {
 	font-size:10px;
 	line-height:0px;
-	
-}
-
-.listitem {
-	margin-left:0px;
-	
-}
-
-
-list li p a {
-	font-size:10px;
-	line-height:0px;
-	
 }
 
 h3, h1, p {
   margin:5px;
-	
 }
-
 
 p {
   margin:5px;
 }
 
          /* Specific Declarations */
-     /* -------------------------------  */
-
 #menu ul {
 	padding-left:10px;
 	margin-left:0px;
@@ -114,8 +90,6 @@ p {
 
 #menu li {
 
-	/*width:124px;*/
-	/*text-align:center;*/
 	line-height:42px;
 	font-family:"Arial";
 	font-size:13px;
@@ -123,47 +97,6 @@ p {
 	font-weight:bold;
 	letter-spacing:1px;
 }
-
-#menu ul ul li {
-	
-	font-size:10px;
-	list-style-type:disc;
-	line-height:13px;
-	padding:0px;
-	margin-left:0px;
-}
-
-
-#links ul {
-	padding-left:10px;
-	margin-left:0px;
-	list-style: none;
-}
-
-
-#links li {
-
-	/*width:124px;*/
-	/*text-align:center;*/
-	line-height:42px;
-	font-family:"Arial";
-	font-size:13px;
-	color:#624125;
-	font-weight:bold;
-	letter-spacing:1px;
-}
-
-
-#links ul ul li {
-	
-	font-size:10px;
-	list-style-type:disc;
-	line-height:13px;
-	padding:0px;
-	margin-left:0px;
-}
-
-
 
 img {
 	border:none;
@@ -193,12 +126,4 @@ a:hover, a:active {
 	text-decoration: underline; 
 	font-weight:bold; 
 	color: #93380b;
-}
-
-#menu ul ul li a {
-	color:#3d3d3d;
-}
-
-#links ul ul li a {
-	color:#3d3d3d;
 }
