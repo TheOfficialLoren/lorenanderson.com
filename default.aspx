@@ -3,9 +3,14 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
 
     <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="js/jquery.nav.js"></script>
     <script type="text/javascript" src="js/jssor.slider.mini.js"></script>
     <script type="text/javascript">
         jQuery(document).ready(function ($) {
+            $('#ulmenu').onePageNav({
+                scrollSpeed: 700,
+                offset: 75
+            });
             var jssor_1_SlideshowTransitions = [
               { $Duration: 1200, x: 0.3, $During: { $Left: [0.3, 0.7] }, $Easing: { $Left: $Jease$.$InCubic, $Opacity: $Jease$.$Linear }, $Opacity: 2 },
               { $Duration: 1200, x: -0.3, $SlideOut: true, $Easing: { $Left: $Jease$.$InCubic, $Opacity: $Jease$.$Linear }, $Opacity: 2 },
@@ -41,12 +46,9 @@
                 $ArrowNavigatorOptions: {
                     $Class: $JssorArrowNavigator$
                 },
-                $ThumbnailNavigatorOptions: {
-                    $Class: $JssorThumbnailNavigator$,
-                    $Cols: 9,
-                    $SpacingX: 12,
-                    $SpacingY: 12,
-                    $Align: 560
+                $BulletNavigatorOptions: {
+                    $Class: $JssorBulletNavigator$,
+                    $ChanceToShow: 2
                 }
             };
 
@@ -57,7 +59,7 @@
             function ScaleSlider() {
                 var refSize = jssor_1_slider.$Elmt.parentNode.clientWidth;
                 if (refSize) {
-                    refSize = Math.min(refSize, 2160);
+                    refSize = Math.min(refSize, 2180);
                     jssor_1_slider.$ScaleWidth(refSize);
                 }
                 else {
@@ -70,6 +72,20 @@
             $(window).bind("orientationchange", ScaleSlider);
             //responsive code end
         });
+    </script>
+    <script type="text/javascript">
+        var tag = document.createElement('script');
+        tag.src = "https://www.youtube.com/player_api";
+        var firstScriptTag = document.getElementsByTagName('script')[0];
+        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+        var player;
+        function onYouTubePlayerAPIReady() {
+            player = new YT.Player('ytplayer', {
+                height: '390',
+                width: '640',
+                videoId: 'elURMMpAQcQ'
+            });
+        }
     </script>
 
     <style type="text/css">
@@ -183,70 +199,124 @@
             margin: 0;
             padding: 0;
         }
+
+        .current a {
+            color: rgb(115, 29, 51);
+        }
+        /* jssor slider bullet navigator skin 05 css */
+        /*
+        .jssorb05 div           (normal)
+        .jssorb05 div:hover     (normal mouseover)
+        .jssorb05 .av           (active)
+        .jssorb05 .av:hover     (active mouseover)
+        .jssorb05 .dn           (mousedown)
+        */
+        .jssorb05 {
+            position: absolute;
+        }
+
+            .jssorb05 div, .jssorb05 div:hover, .jssorb05 .av {
+                position: absolute;
+                /* size of bullet elment */
+                width: 32px;
+                height: 32px;
+                background: url('img/b05.png') no-repeat;
+                overflow: hidden;
+                cursor: pointer;
+            }
+
+            .jssorb05 div {
+                background-position: -7px -7px;
+            }
+
+                .jssorb05 div:hover, .jssorb05 .av:hover {
+                    background-position: -37px -7px;
+                }
+
+            .jssorb05 .av {
+                background-position: -67px -7px;
+            }
+
+            .jssorb05 .dn, .jssorb05 .dn:hover {
+                background-position: -97px -7px;
+            }
     </style>
 
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
-    <div id="jssor_1" style="position: relative; margin: 0 auto; top: 0; left: 0px; width: 2160px; height: 1200px; visibility: hidden; background-color: #24262e;">
-        <!-- Loading Screen -->
-        <div data-u="loading" style="position: absolute; top: 0px; left: 0px;">
-            <div style="filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block; top: 0px; left: 0px; width: 100%; height: 100%;"></div>
-            <div style="position: absolute; display: block; background: url('img/loading.gif') no-repeat center center; top: 0px; left: 0px; width: 100%; height: 100%;"></div>
-        </div>
-        <div data-u="slides" style="cursor: default; position: relative; top: 0px; left: 0px; width: 2160px; height: 1200px; overflow: hidden;">
-            <div data-p="144.50" style="display: none;">
-                <img data-u="image" src="img/img-1.jpg" />
-                <img data-u="thumb" src="img/thumb-1.jpg" />
+    <div id="home" class="section">
+        <div id="jssor_1" style="position: relative; margin: 0 auto; top: 0; left: 0px; width: 2160px; height: 1200px; visibility: hidden; background-color: #24262e;">
+            <!-- Loading Screen -->
+            <div data-u="loading" style="position: absolute; top: 0px; left: 0px;">
+                <div style="filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block; top: 0px; left: 0px; width: 100%; height: 100%;"></div>
+                <div style="position: absolute; display: block; background: url('img/loading.gif') no-repeat center center; top: 0px; left: 0px; width: 100%; height: 100%;"></div>
             </div>
-            <div data-p="144.50" style="display: none;">
-                <img data-u="image" src="img/img-2.jpg" />
-                <img data-u="thumb" src="img/thumb-2.jpg" />
-            </div>
-            <div data-p="144.50" style="display: none;">
-                <img data-u="image" src="img/img-3.jpg" />
-                <img data-u="thumb" src="img/thumb-3.jpg" />
-            </div>
-            <div data-p="144.50" style="display: none;">
-                <img data-u="image" src="img/img-4.jpg" />
-                <img data-u="thumb" src="img/thumb-4.jpg" />
-            </div>
-            <div data-p="144.50" style="display: none;">
-                <img data-u="image" src="img/img-5.jpg" />
-                <img data-u="thumb" src="img/thumb-5.jpg" />
-            </div>
-            <div data-p="144.50" style="display: none;">
-                <img data-u="image" src="img/img-6.jpg" />
-                <img data-u="thumb" src="img/thumb-6.jpg" />
-            </div>
-            <div data-p="144.50" style="display: none;">
-                <img data-u="image" src="img/img-7.jpg" />
-                <img data-u="thumb" src="img/thumb-7.jpg" />
-            </div>
-            <div data-p="144.50" style="display: none;">
-                <img data-u="image" src="img/img-8.jpg" />
-                <img data-u="thumb" src="img/thumb-8.jpg" />
-            </div>
-            <div data-p="144.50" style="display: none;">
-                <img data-u="image" src="img/img-9.jpg" />
-                <img data-u="thumb" src="img/thumb-9.jpg" />
-            </div>
-        </div>
-        <!-- Thumbnail Navigator -->
-        <div data-u="thumbnavigator" class="jssort01" style="position: absolute; left: 0px; bottom: -110px; width: 1050px; height: 100px;" data-autocenter="1">
-            <!-- Thumbnail Item Skin Begin -->
-            <div data-u="slides" style="cursor: default;">
-                <div data-u="prototype" class="p">
-                    <div class="w">
-                        <div data-u="thumbnailtemplate" class="t"></div>
-                    </div>
-                    <div class="c"></div>
+            <div data-u="slides" style="cursor: default; position: relative; top: 0px; left: 0px; width: 2160px; height: 1200px; overflow: hidden;">
+                <div data-p="144.50" style="display: none;">
+                    <img data-u="image" src="img/img-1.jpg" />
+                </div>
+                <div data-p="144.50" style="display: none;">
+                    <img data-u="image" src="img/img-2.jpg" />
+                </div>
+                <div data-p="144.50" style="display: none;">
+                    <img data-u="image" src="img/img-3.jpg" />
+                </div>
+                <div data-p="144.50" style="display: none;">
+                    <img data-u="image" src="img/img-4.jpg" />
+                </div>
+                <div data-p="144.50" style="display: none;">
+                    <img data-u="image" src="img/img-5.jpg" />
+                </div>
+                <div data-p="144.50" style="display: none;">
+                    <img data-u="image" src="img/img-6.jpg" />
+                </div>
+                <div data-p="144.50" style="display: none;">
+                    <img data-u="image" src="img/img-7.jpg" />
+                </div>
+                <div data-p="144.50" style="display: none;">
+                    <img data-u="image" src="img/img-8.jpg" />
+                </div>
+                <div data-p="144.50" style="display: none;">
+                    <img data-u="image" src="img/img-9.jpg" />
                 </div>
             </div>
-            <!-- Thumbnail Item Skin End -->
+            <!-- Bullet Navigator -->
+            <div data-u="navigator" class="jssorb05" style="top: 50px; right: 16px;" data-autocenter="1">
+                <!-- bullet navigator item prototype -->
+                <div data-u="prototype" style="width: 32px; height: 32px;"></div>
+            </div>
+            <!-- Arrow Navigator -->
+            <span data-u="arrowleft" class="jssora05l" style="top: 158px; left: 8px; width: 40px; height: 40px;"></span>
+            <span data-u="arrowright" class="jssora05r" style="top: 158px; right: 8px; width: 40px; height: 40px;"></span>
         </div>
-        <!-- Arrow Navigator -->
-        <span data-u="arrowleft" class="jssora05l" style="top: 158px; left: 8px; width: 40px; height: 40px;"></span>
-        <span data-u="arrowright" class="jssora05r" style="top: 158px; right: 8px; width: 40px; height: 40px;"></span>
+    </div>
+    <div id="bio" class="section" style="clear: both; margin-top: 100px; width: 100%">
+        <div>
+            <h2>About Me</h2>
+            <img src="img/mug.jpg" style="float: left; width: 400px; margin-right: 5px;" alt="Mug Shot" />
+            <p>I am a full time software engineer and part time aerial photographer. For more details on my professional please visit my <a href="https://www.linkedin.com/in/loren-anderson-85953a13">LinkedIn</a> account.</p>
+            <br />
+            <p>I have a strong passion for flying quadcopters and capturing photos and angles that we've never imagined before.</p>
+            <div class="indent" style="display: inline-block;">
+                <p>Real Estate</p>
+                <p>Sports</p>
+                <p>Auto</p>
+                <p>Survey</p>
+                <p>Landscape</p>
+            </div>
+        </div>
+
+        <div style="clear: both"></div>
+        <div>
+            <div id="instagram" style="margin-top: 30px; float: left;">
+                Please follow me on <a href="https://www.instagram.com/lorenanderson.photography/">Instagram</a>!<br />
+                <iframe src="http://widget.websta.me/in/lorenanderson.photography/?r=1&w=4&h=3&b=0&p=5" allowtransparency="true" frameborder="0" scrolling="no" style="border: none; overflow: hidden; width: 420px; height: 315px"></iframe>
+            </div>
+            <div id="youtube" style="margin-top: 30px">
+                Please subscribe to my <a href="https://www.youtube.com/channel/UClXuXxiIVDGRuFggFSW6yGw">Youtube Channel</a>!<br />
+                <div id="ytplayer"></div>
+            </div>
+        </div>
     </div>
 </asp:Content>
 

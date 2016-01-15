@@ -1,129 +1,157 @@
 /* CSS Written by Loren Anderson */
 body {
-	background:#fff;
+    background: #000;
     font-family: raleway,sans-serif;
+    color: white;
 }
-          /* Specific DIV tags*/
-     /* -------------------------------  */
+/* Specific DIV tags*/
+/* -------------------------------  */
 
 
 #container {
-	width:100%;
+    width: 100%;
 }
 
 #content {
-	background: #FFF;
 }
 
-#header ul {
-    list-style: none;
-    margin-left: -55px;
-    margin-top:-12px
+#header {
+    width: 100%;
+    height: 65px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 10000;
+    background-color: #000000;
 }
 
-#header ul li {
-    float: left;    
-}
+    #header ul {
+        list-style: none;
+        margin-left: -55px;
+        margin-top: -12px;
+    }
+
+        #header ul li {
+            float: left;
+        }
 
 
-#header ul li a {
-    display: inline-block;
+            #header ul li a {
+                display: inline-block;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+            }
+
+
+
+#footer p {
     text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-}
-
-#menu {
-    width: 200px;
-    position: absolute;
-    float: left;
-    top: 150px;
-    left: 150px;
-    background: white;
-    z-index: 10;
-}
-
-#footer
-{
-}
-
-#footer p
-{
-    text-align:center;
-    font-size:10px;
+    font-size: 10px;
 }
 
 
 
-           /* Specific Fonts  */
-     /* -------------------------------  */
+/* Specific Fonts  */
+/* -------------------------------  */
 
 
 #content h1, h2 {
-	font-family: Georgia;
-	text-align:center;
-	font-size:25pt;
-	color:#3d3d3d;
+    font-family: Georgia;
+    font-size: 25pt;
+    color: #e5e5e5;
 }
 
 
-#menu li p a {
-	font-size:10px;
-	line-height:0px;
-}
 
 h3, h1, p {
-  margin:5px;
+    margin: 5px;
 }
 
 p {
-  margin:5px;
+    margin: 5px;
 }
 
-         /* Specific Declarations */
-#menu ul {
-	padding-left:10px;
-	margin-left:0px;
-	list-style: none;
-}
-
-
-#menu li {
-
-	line-height:42px;
-	font-family:"Arial";
-	font-size:13px;
-	color:#624125;
-	font-weight:bold;
-	letter-spacing:1px;
-}
 
 img {
-	border:none;
+    border: none;
 }
 
 
-                 /* Links */
-     /* -------------------------------  */
+/* Links */
+/* -------------------------------  */
 
 
 
 a:link {
-	text-decoration:none;
-	font-weight:bold; 
-	color:#333333;
-	
+    text-decoration: none;
+    font-weight: bold;
+    color: #e5e5e5;
 }
 
-a:visited {  
-	text-decoration: none;
-	font-weight:bold; 
-	color:#333333;
-	
+a:visited {
+    text-decoration: none;
+    font-weight: bold;
+    color: #e5e5e5;
 }
 
-a:hover, a:active { 
-	text-decoration: underline; 
-	font-weight:bold; 
-	color: #93380b;
+a:hover, a:active {
+    text-decoration: underline;
+    font-weight: bold;
+    color: #fff;
+}
+
+
+/* Small Tablet Landscape (smaller than 800px) */
+@media only screen and (max-width: 800px) {
+    .container {
+        width: 700px;
+    }
+
+
+    #faq, #past-searches, #current-searches {
+        padding: 100px 0 0 0;
+    }
+
+    .content {
+        width: 498px;
+        height: auto;
+        color: #e5e5e5;
+        padding: 0;
+        position: static;
+        top: 0;
+    }
+
+    .content {
+        width: auto;
+        padding: 60px 40px;
+    }
+
+    #values-list li {
+        width: 100%;
+        padding: 0;
+    }
+
+    #nav-mobile li {
+        margin: 0 12px;
+    }
+}
+
+/* Mobile Landscape (smaller than 480px) */
+@media only screen and (max-width: 480px) {
+    #header {
+        height: 85px;
+    }
+
+    #ytplayer {
+        width: 100%;
+    }
+
+    #content {
+        margin-top: 85px;
+    }
+
+    #instagram {
+        float: none;
+    }
 }
