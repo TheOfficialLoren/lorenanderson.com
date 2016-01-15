@@ -55,7 +55,7 @@
             //responsive code begin
             //you can remove responsive code if you don't want the slider scales while window resizing
             function ScaleSlider() {
-                var refSize = jssor_1_slider.$Elmt.parentNode.clientWidth * .92;
+                var refSize = jssor_1_slider.$Elmt.parentNode.clientWidth;
                 if (refSize) {
                     refSize = Math.min(refSize, 2160);
                     jssor_1_slider.$ScaleWidth(refSize);
@@ -178,11 +178,16 @@
             width /**/: 108px;
             height /**/: 108px;
         }
+
+        body {
+            margin: 0;
+            padding: 0;
+        }
     </style>
 
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
-    <div id="jssor_1" style="position: relative; margin: 0 auto; top: 0; left: 0px; width: 2160px; height: 1200px; overflow: hidden; visibility: hidden; background-color: #24262e;">
+    <div id="jssor_1" style="position: relative; margin: 0 auto; top: 0; left: 0px; width: 2160px; height: 1200px; visibility: hidden; background-color: #24262e;">
         <!-- Loading Screen -->
         <div data-u="loading" style="position: absolute; top: 0px; left: 0px;">
             <div style="filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block; top: 0px; left: 0px; width: 100%; height: 100%;"></div>
@@ -227,7 +232,7 @@
             </div>
         </div>
         <!-- Thumbnail Navigator -->
-        <div data-u="thumbnavigator" class="jssort01" style="position: absolute; left: 0px; bottom: 10px; width: 1050px; height: 100px;" data-autocenter="1">
+        <div data-u="thumbnavigator" class="jssort01" style="position: absolute; left: 0px; bottom: -110px; width: 1050px; height: 100px;" data-autocenter="1">
             <!-- Thumbnail Item Skin Begin -->
             <div data-u="slides" style="cursor: default;">
                 <div data-u="prototype" class="p">

@@ -23,8 +23,8 @@
 
         <div id="container">
             <div id="header">
-                <div style="margin-left: 20%; display: block;">
-                    <span style="font-size: 22pt; font-family: Cambria;">Loren Anderson - Aerial Photography</span>
+                <div style="margin-left: 2%; display: block;">
+                    <span style="font-size: 22pt; font-family: Cambria;">LOREN ANDERSON</span> <span style="font-size: 16pt; color: gray; font-family: Cambria;">Photography & Software</span>
                     <ul runat="server" id="ulmenu">
                         <li><a href="Default.aspx">Home</a></li>
                         <li><a href="Bio.aspx">About</a></li>
@@ -33,13 +33,13 @@
                     </ul>
                 </div>
             </div>
-            <div id="content">
+            <div id="content" style="clear:both">
                 <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
                 </asp:ContentPlaceHolder>
             </div>
             <br clear="all" />
-            <div id="footer">
-                <p>Contact Loren Anderson at <a href="mailto:lorengphd@gmail.com">loren@lorenanderson.com</a></p>
+            <div id="footer" style="margin-top: 70px;">
+                <p>Contact Loren Anderson at <a href="mailto:loren@lorenanderson.com">loren@lorenanderson.com</a></p>
                 <p><a href="https://www.linkedin.com/in/loren-anderson-85953a13">LinkedIn</a></p>
             </div>
         </div>
