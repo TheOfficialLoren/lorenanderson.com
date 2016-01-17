@@ -13,7 +13,7 @@
         urchinTracker();
     </script>
     <title></title>
-
+	<meta name="viewport" content="width=device-width, user-scalable=no"
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>

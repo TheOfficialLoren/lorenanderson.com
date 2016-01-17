@@ -101,6 +101,19 @@ a:hover, a:active {
     color: #fff;
 }
 
+#bio iframe {
+    border: none;
+    overflow: hidden;
+    width: 420px;
+    height: 315px;
+}
+
+#bio #mug {
+    float: left;
+    width: 400px;
+    margin-right: 5px;
+}
+
 
 /* Small Tablet Landscape (smaller than 800px) */
 @media only screen and (max-width: 800px) {
@@ -141,6 +154,14 @@ a:hover, a:active {
 @media only screen and (max-width: 480px) {
     #header {
         height: 85px;
+    }
+
+    #bio {
+        overflow: hidden;
+    }
+
+    #bio #mug, #bio iframe {
+        width: 100%;
     }
 
     #ytplayer {
